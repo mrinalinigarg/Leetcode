@@ -1,0 +1,25 @@
+# Exclude all the numbers from nums divisible by 3 or 5
+print(nums)
+fnums = filter(lambda x: x % 3 != 0 and x % 5 != 0, nums)
+print(list(fnums))
+
+# Return the string without its vowels
+print(string)
+vowels = 'AEIOUaeiou'
+fstring = filter(lambda x: x not in vowels, string)
+print(''.join(fstring))
+
+# Filter all the spells in spells with more than two 'a's
+print(spells)
+fspells = filter(lambda x: x.count('a') > 2, spells)
+print(list(fspells))
+
+# Reverse a string using reduce()
+string = 'DataCamp'
+inv_string = reduce(lambda x, y: y + x, string)
+print('Inverted string = ' + inv_string)
+
+# Convert a number sequence into a single number
+nums = [5, 6, 0, 1]
+num = reduce(lambda x, y: 10*x + y, nums)
+print(str(nums) + ' is converted to ' + str(num))
