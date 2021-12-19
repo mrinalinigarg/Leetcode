@@ -1,0 +1,18 @@
+spiral = []
+
+for i in range(0, size):
+    # Convert each part marked by a red arrow to a list
+    spiral += list(square[i, i:size-i])
+    # Convert each part marked by a green arrow to a list
+    spiral += list(square[i+1:size-i, size-i-1])
+    # Convert each part marked by a blue arrow to a list
+    spiral += list(reversed(square[size-i-1, i:size-i-1]))
+    # Convert each part marked by a magenta arrow to a list
+    spiral += list(reversed(square[i+1:size-i-1, i]))
+        
+print(spiral)
+
+# Substitute the code in the block 2 given the input_array2
+output_array2 = input_array2[input_array2 % 2 == 0]
+print(list(filter(lambda x: x % 2 == 0, input_list2)))
+print(output_array2)
